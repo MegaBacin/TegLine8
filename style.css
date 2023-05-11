@@ -87,11 +87,6 @@ a{
     padding-bottom: 0px;
 }
 
-
-.item-image{
-    width: 20px;
-    height: 30px;
-}
 .card{
     display: inline-block;
     border: none;
@@ -120,6 +115,11 @@ a{
 }
 .item-status{
     color: green;
+}
+
+.item-img{
+    height: 20%;
+    width: 30%;
 }
 
 .Pembayaran {

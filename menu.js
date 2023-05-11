@@ -30,12 +30,13 @@ function renderFirstTime(items){
         card.classList.add(`card`);
         card.classList.add(perMakanan.type);
         card.id = perMakanan.id;
-        const img = document.createElement("img");
+        let img = new Image();
         img.classList.add("item-img");
-        img.src = `./assets/img/${perMakanan.name
-          .toLowerCase()
-          .replace(" ", "-")}.jpeg`;
+        img.src = `./assets/img/${perMakanan.id}.jpeg`;
         img.alt = `${perMakanan.name}`;
+        img.onload = function () {
+          card.appendChild(img);
+        };
         const title = document.createElement("p");
         title.innerText = `${perMakanan.name}`;
         const harga = document.createElement("p");
@@ -80,10 +81,13 @@ function render(filter,type){
           card.classList.add(`card`)
           card.classList.add(filter[i][type]);
           card.id = filter[i].id;
-          const img = document.createElement('img');
+          let img = new Image();
           img.classList.add('item-img');
-          img.src =`./assets/img/${filter[i].name.toLowerCase().replace(' ','-')}.jpeg`;
+          img.src = `./assets/img/${filter[i].id}.jpeg`;
           img.alt =`${filter[i].name}`;
+          img.onload = function() {
+            card.appendChild(img);
+          };
           const title = document.createElement("p");
           title.innerText=`${filter[i].name}`;
           const harga = document.createElement("p");
