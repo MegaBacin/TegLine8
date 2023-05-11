@@ -1,2 +1,2 @@
 # TegLine8
-Kelompok best mebentuk tempat pemesanan untuk TegLine8
+Kelompok best membentuk tempat pemesanan untuk TegLine8
