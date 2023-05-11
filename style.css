@@ -8,7 +8,11 @@ body{
 }
 
 header{
+    top:0;
+    left: 0;
+    position: fixed;
     height: 55px;
+    width: 100%;
     background-color: black;
     color: white;
 }
@@ -63,12 +67,14 @@ a{
 }
 
 #cards{
-    margin: 10px 0 0 0; 
+    margin-top: 50px;
     text-align: center;
     height: 600px;
 }
 .filter-menu{
     text-align: center;
+    width: 100%;
+    position: fixed;
     background-color: aquamarine;
 }
 
@@ -93,7 +99,7 @@ a{
     /* background: rgb(34, 193, 195);
     background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%); */
     margin: 10px 5px;
-    padding: 30px;
+    padding: 25px;
     width: 200px;
     height: 200px;
     border-radius: 10px;
@@ -101,17 +107,44 @@ a{
 }
 .card:hover{
     box-shadow: 0px 5px 10px 0px gray;
-    width: 220px;
+    width: 230px;
+    height: 250px;
     cursor: pointer;
     animation-name: card-gerak;
     animation-duration: 0.2s;
     /* animation-iteration-count: infinite; */
     animation-fill-mode: forwards;
-
 }
+
 @keyframes card-gerak {
-    from {padding: 30px; box-shadow: 0px 5px 2px 0px gray;}
-    to {padding: 50px; box-shadow: 0px 5px 10px 0px gray;}
+    from {
+        padding: 25px;
+        box-shadow: 0px 5px 2px 0px gray;
+    }
+
+    to {
+        padding: 50px;
+        box-shadow: 0px 5px 10px 0px gray;
+    }
+}
+
+.lauk{
+    background-color: rgb(251, 230, 178);
+}
+.sayur{
+    background-color: rgb(255, 173, 214);
+}
+.nasi{
+    background-color: rgb(229, 203, 255);
+}
+.minuman{
+    background-color: rgb(167, 167, 255);
+}
+
+
+.item-title{
+    font-size: 25px;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 .item-status{
     color: green;
@@ -120,6 +153,15 @@ a{
 .item-img{
     height: 30%;
     width: 40%;
+}
+.item-img:hover{
+    animation-name: imgZoom;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+@keyframes imgZoom{
+    from {height: 30%; width: 40%;}
+    to {height: 40%; width: 50%;}
 }
 
 .Pembayaran {
