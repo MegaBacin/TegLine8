@@ -43,7 +43,7 @@ a{
     color: springgreen;
 }
 
-.cards{
+#cards{
     margin: 10px 0 0 0; 
     text-align: center;
     height: 600px;
@@ -73,6 +73,10 @@ a{
 .btn:hover{
     border-bottom: 5px solid green;
     padding-bottom: 0px;
+}
+.item-image{
+    width: 20px;
+    height: 30px;
 }
 .card{
     display: inline-block;
