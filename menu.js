@@ -75,43 +75,70 @@ function render(filter,type){
     // console.log(body);
     body[0].appendChild(newCards);
     for(let i in filter){
-        if(filter[i].type === type){
-            const card = document.createElement("div");
-            card.classList.add(`card`)
-            card.classList.add(filter[i][type]);
-            card.id = filter[i].id;
-            const img = document.createElement('img');
-            img.classList.add('item-img');
-            img.src =`./assets/img/${filter[i].name.toLowerCase().replace(' ','-')}.jpeg`;
-            img.alt =`${filter[i].name}`;
-            const title = document.createElement("p");
-            title.innerText=`${filter[i].name}`;
-            const harga = document.createElement("p");
-            const status = document.createElement("p");
-            title.classList.add(`item-title`);
-            harga.classList.add(`item-harga`);
-            harga.innerText = `${new Intl.NumberFormat("id-ID", {
-              style: "currency",
-              currency: "IDR",
-            }).format(filter[i].price)}`;
-            status.classList.add(`item-status`);
-            if(filter[i].stock !== 0){
-                status.innerText = `Tersedia: ${filter[i].stock}`;
-            }else{
-                status.innerText = `Habis`;
-                status.style = 'color: red';
-            }
-            newCards.appendChild(card);
-            card.appendChild(title);
-            card.appendChild(harga);
-            card.appendChild(status);
-        }
-    }   
-
+      if(filter[i].type === type){
+          const card = document.createElement("div");
+          card.classList.add(`card`)
+          card.classList.add(filter[i][type]);
+          card.id = filter[i].id;
+          const img = document.createElement('img');
+          img.classList.add('item-img');
+          img.src =`./assets/img/${filter[i].name.toLowerCase().replace(' ','-')}.jpeg`;
+          img.alt =`${filter[i].name}`;
+          const title = document.createElement("p");
+          title.innerText=`${filter[i].name}`;
+          const harga = document.createElement("p");
+          const status = document.createElement("p");
+          title.classList.add(`item-title`);
+          harga.classList.add(`item-harga`);
+          harga.innerText = `${new Intl.NumberFormat("id-ID", {
+            style: "currency",
+            currency: "IDR",
+          }).format(filter[i].price)}`;
+          status.classList.add(`item-status`);
+          if(filter[i].stock !== 0){
+              status.innerText = `Tersedia: ${filter[i].stock}`;
+          }else{
+              status.innerText = `Habis`;
+              status.style = 'color: red';
+          }
+          newCards.appendChild(card);
+          card.appendChild(title);
+          card.appendChild(harga);
+          card.appendChild(status);
+      }
+      let cards = document.getElementsByClassName(`card`);
+      for (let card of cards) {
+      card.setAttribute("onclick", `addItemToCart(items,${card.id})`);
+    }
+  }   
+}
+let yangDiPesan = [];
+function addItemToCart(items,name){
+  // console.log(name);
+  for(let item of items){
+    if(name === item.id){
+      let card = document.getElementById(name);
+      let textStock = card.childNodes[2];
+      item.stock--;
+      if (item.stock > 0) {
+        textStock.innerText = `Tersedia: ${item.stock}`
+        yangDiPesan.push(name);
+      }else{
+        textStock.innerText = `HABIS`;
+        textStock.style = 'color: red';
+        break;
+      }
+    }
+  }
 }
 
-function addItemToCart(items,name){
-    console.log(name);
+function getInvoice(items,yangDiPesan){
+  if(localStorage.getItem('keranjang',yangDiPesan)){
+    console.log(`keranjang terisi`)
+    localStorage.removeItem('keranjang');
+  }
+  localStorage.setItem('items',JSON.stringify(items));
+  localStorage.setItem('keranjang',yangDiPesan);
 }
 
 
