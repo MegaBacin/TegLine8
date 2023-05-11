@@ -103,3 +103,115 @@ a{
 .item-status{
     color: green;
 }
+
+.Pembayaran {
+    background-color:black;
+    text-align: center;
+    margin: 0 15%;
+    color: aqua;
+    height: 600px;
+    width: 1000px;
+}
+
+.Kiri {
+    width: 300px;
+    height: 100%;
+    margin-left: 45px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.Kanan {
+    height: 97%;
+    width: 540px;
+    margin-left: 45px;
+    margin-right: 45px;
+    border: solid;
+    border-radius: 25px;
+    border-color: blue;
+    display: inline-block;
+}
+
+.KiriAtas {
+    height: 66%;
+    width: 100%;
+    border: solid;
+    border-color: blue;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.Description {
+    border-bottom: solid;
+    border-color: blue;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.Information{
+    padding-left: 20px;
+}
+
+.KiriBawah {
+    margin-top: 30px;
+    height: 154px;
+    width: 100%;
+    border: solid;
+    border-color: blue;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.text {
+    font-size: 13px;
+    display: inline-block;
+}
+
+.headerText {
+    font-size: 15px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#textnama {
+    display: inline-block;
+    vertical-align: text-top;
+    border: solid;
+    border-color: black;
+}
+
+.sizeKecil {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sizeSedang {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.flex-container > div {
+    background-color: #f1f1f1;
+    width: 50px;
+    margin: 7px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 50px;
+    display: inline-block;
+}
+
+.bagianBawah{
+    padding: 5px 10px;
+    vertical-align: middle;
+    height: 70%;
+}
+
+.OrderanMakanan {
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: left;
+}
