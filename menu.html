@@ -21,22 +21,22 @@
         </div>
     </header>
     <div class="filter-menu">
-        <div class="btn">
+        <div class="btn" onclick="render(items,'nasi')">
             <p class="btn-text">Nasi</p>
         </div>
-        <div class="btn">
+        <div class="btn" onclick="render(items,'lauk')">
             <p class="btn-text">Lauk</p>
         </div>
-        <div class="btn">
+        <div class="btn" onclick="render(items,'sayur')">
             <p class="btn-text">Sayur</p>
         </div>
-        <div class="btn">
+        <div class="btn" onclick="render(items,'minuman')">
             <p class="btn-text">Minuman</p>
         </div>
     </div>
-    <div class="cards">
+    <div id="cards">
         <div class="card lauk">
-            <img src="" alt="gambar">
+            <img class="item-img" src="" alt="gambar">
             <p class="item-title">Ayam Balado</p>
             <p class="item-harga">Rp. 20.000,-</p>
             <p class="item-status">Tersedia</p>
