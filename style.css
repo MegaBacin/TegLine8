@@ -1,0 +1,105 @@
+html{
+    font-family: "Helvetica Neue";
+}
+body{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 55px;
+    background-color: black;
+    color: white;
+}
+.header-item{
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 17px;
+}
+
+#logo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#logo-text{
+    font-size: 20px;
+}
+a{
+    margin-right: 10px;
+    width: 50px;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-home:hover{
+    color: springgreen;
+}
+.btn-menu:hover {
+    color: springgreen;
+}
+
+.cards{
+    margin: 10px 0 0 0; 
+    text-align: center;
+    height: 600px;
+}
+.filter-menu{
+    text-align: center;
+    background-color: aquamarine;
+}
+
+.btn {
+    display: inline-block;
+    background-color: aquamarine;
+    height: 50px;
+    width: 20%;
+    color: black;
+}
+.btn:hover{
+    background-color: rgb(103, 217, 153);
+    height: 45px;
+    cursor: pointer;
+}
+
+/* .btn:hover {
+    background-color: rgb(184, 184, 184);
+} */
+
+.btn:hover{
+    border-bottom: 5px solid green;
+    padding-bottom: 0px;
+}
+.card{
+    display: inline-block;
+    border: none;
+    /* background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%); */
+    margin: 10px 5px;
+    padding: 30px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow:0px 5px 2px 0px gray;
+}
+.card:hover{
+    box-shadow: 0px 5px 10px 0px gray;
+    width: 220px;
+    cursor: pointer;
+    animation-name: card-gerak;
+    animation-duration: 0.2s;
+    /* animation-iteration-count: infinite; */
+    animation-fill-mode: forwards;
+
+}
+@keyframes card-gerak {
+    from {padding: 30px; box-shadow: 0px 5px 2px 0px gray;}
+    to {padding: 50px; box-shadow: 0px 5px 10px 0px gray;}
+}
+.item-status{
+    color: green;
+}
