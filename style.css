@@ -42,6 +42,22 @@ a{
 .btn-menu:hover {
     color: springgreen;
 }
+.btn-cart {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: green;
+    font-weight: bold;
+}
+.btn-cart:hover{
+    background-color: springgreen;
+    color: black;
+
+}
+@keyframes keranjang-hover{
+    from {}
+    to {}
+}
 
 #cards{
     margin: 10px 0 0 0; 
@@ -64,16 +80,11 @@ a{
     background-color: rgb(103, 217, 153);
     height: 45px;
     cursor: pointer;
-}
-
-/* .btn:hover {
-    background-color: rgb(184, 184, 184);
-} */
-
-.btn:hover{
     border-bottom: 5px solid green;
     padding-bottom: 0px;
 }
+
+
 .item-image{
     width: 20px;
     height: 30px;
