@@ -35,7 +35,7 @@ function render(filter,type){
             card.classList.add(filter[i][type]);
             const img = document.createElement('img');
             img.classList.add('item-img');
-            img.src =`./assets/img/${filter[i].name.toLowerCase()}.jpeg`;
+            img.src =`./assets/img/${filter[i].name.toLowerCase().replace(' ','-')}.jpeg`;
             img.alt =`${filter[i].name}`;
             const title = document.createElement("p");
             title.innerText=`${filter[i].name}`;

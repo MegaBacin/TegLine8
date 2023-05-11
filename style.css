@@ -52,11 +52,14 @@ a{
 .btn-cart:hover{
     background-color: springgreen;
     color: black;
+    animation-name: keranjang-hover;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
 
 }
 @keyframes keranjang-hover{
-    from {}
-    to {}
+    from {background-color: green;}
+    to {background-color: springgreen;}
 }
 
 #cards{
