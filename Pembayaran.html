@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSSSS.css">
     <script src="Java.js"></script>
 </head>
-<body>
+<body id="buddy">
 
 <div class="Pembayaran">
 
@@ -37,10 +37,10 @@
             <div class="bagianBawah">
 
                 <div class="flex-container">
-                    <div> <img onclick="menunjukanPembayaran('tunai')" type="image" src="C:\Hacktiv8\Phase_0\Hackton8\Images\cash-1296584_640.png" alt="Submit" class="sizeSedang"></div>
+                    <div><img onclick="menunjukanPembayaran('tunai')" class="sizeSedang" src="C:\Hacktiv8\Phase_0\Hackton8\Images\cash-1296584_640.png" alt="Submit"></div>
                     <div><img onclick="menunjukanPembayaran('gopay')" class="sizeSedang" src="C:\Hacktiv8\Phase_0\Hackton8\Images\GoPay-logo-2048x1392.png"></div>
-                    <div><img class="sizeSedang" src="C:\Hacktiv8\Phase_0\Hackton8\Images\Mastercard_Logo_1990-2048x1223.png"></div>  
-                    <div><img class="sizeSedang" src="C:\Hacktiv8\Phase_0\Hackton8\Images\Visa-Logo.png"></div>
+                    <div><img onclick="menunjukanPembayaran('MasterCard')" class="sizeSedang" src="C:\Hacktiv8\Phase_0\Hackton8\Images\Mastercard_Logo_1990-2048x1223.png"></div>  
+                    <div><img onclick="menunjukanPembayaran('Visa')" class="sizeSedang" src="C:\Hacktiv8\Phase_0\Hackton8\Images\Visa-Logo.png"></div>
                 </div>
 
             </div>
@@ -55,14 +55,34 @@
             <h3 class="headerText"> &ensp; Orders</h3>
         </div>
 
-        <div >
-            <div id="ordermakanan">
-            </div>
+        <div class="nunjukMakanan">
+
+        </div>
+
+        <div id="ordermakanan">   
+        </div>
+
+        <div class="buttonYang">
         </div>
 
     </div>
 
 </div>
+
+
+<div id="myModal" class="modal">
+
+    <div id="modal-content">
+        <div id="harga">
+            100.000.000
+        </div>
+        <div>
+            <h3>Anda yakin bayar dan melanjuti</h3>
+        </div>
+        <button id="confirmButton" onclick="buttonOnClick()" onmouseup="buttonConfirmOff()" onmousedown="buttonConfirm()">Confirm</button>
+    </div>
+  
+  </div>
     
 </body>
 </html>
