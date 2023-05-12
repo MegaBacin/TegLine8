@@ -28,7 +28,7 @@ function renderFirstTime(items){
     for(let perMakanan of items){
         const card = document.createElement("div");
         card.classList.add(`card`);
-        card.classList.add(perMakanan.type);
+        card.classList.add(`${perMakanan.type}`);
         card.id = perMakanan.id;
         let img = new Image();
         img.classList.add("item-img");
@@ -79,7 +79,7 @@ function render(filter,type){
       if(filter[i].type === type){
           const card = document.createElement("div");
           card.classList.add(`card`)
-          card.classList.add(filter[i][type]);
+          card.classList.add(`${filter[i][type]}`);
           card.id = filter[i].id;
           let img = new Image();
           img.classList.add('item-img');
