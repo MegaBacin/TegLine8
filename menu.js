@@ -32,7 +32,7 @@ function renderFirstTime(items){
         card.id = perMakanan.id;
         let img = new Image();
         img.classList.add("item-img");
-        img.src = `./assets/img/${perMakanan.id}.jpeg`;
+        img.src = `./img/${perMakanan.id}.jpeg`;
         img.alt = `${perMakanan.name}`;
         img.onload = function () {
           card.appendChild(img);
@@ -83,7 +83,7 @@ function render(filter,type){
           card.id = filter[i].id;
           let img = new Image();
           img.classList.add('item-img');
-          img.src = `./assets/img/${filter[i].id}.jpeg`;
+          img.src = `./img/${filter[i].id}.jpeg`;
           img.alt =`${filter[i].name}`;
           img.onload = function() {
             card.appendChild(img);
